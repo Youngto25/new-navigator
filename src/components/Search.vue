@@ -1,0 +1,104 @@
+<template>
+  <div id="wrapper">
+    <div class="change">
+      <span @click="isTrue = !isTrue" :class="{'active': !isTrue}">Bing</span>
+      <span @click="isTrue = !isTrue" :class="{'active': isTrue}">Google</span>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" v-model="value" @keypress.enter="search"/>
+      <div class="search-button" @click="search">
+        <a-icon type="search" style="fontSize: 24px;" class="search-icon"/>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data(){
+    return {
+      value: '',
+      isTrue: false
+    }
+  },
+  methods: {
+    search(){
+      if(this.isTrue){
+        window.open(`https://www.google.com/search?q=${this.value}`)
+      }else{
+        window.open(`https://cn.bing.com/search?q=${this.value}`)
+      }
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  .change{
+    align-self: flex-start;
+    text-align: center;
+    span{
+      display: inline-block;
+      width: 80px;
+      height: 35px;
+      line-height: 35px;
+      background: #cccccc;
+      position: relative;
+      color: #1F1F1F;
+      cursor: pointer;
+      opacity: 0.8;
+      border-top-left-radius: 8px;
+      &:first-child{
+        margin-right: 8px;
+      }
+      &::after{
+        content: '';
+        display: block;
+        border-width: 17.5px;
+        border-style: solid;
+        border-color: transparent transparent #cccccc #cccccc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        z-index: 10;
+      }
+      &.active{
+        background: #efefef;
+        z-index: 10;
+        opacity: 1;
+        &::after{
+          border-color: transparent transparent #efefef #efefef;
+        }
+      }
+    }
+  }
+  .search-wrapper{
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: #efefef;
+    border-radius: 0 8px 8px 8px;
+    &.active{
+      border: 0 1px 1px 1px solid #232323;
+    }
+    input{
+      height: 30px;
+      width: 500px;
+      padding: 8px;
+      font-size: 14px;
+      background: #efefef;
+    }
+    .search-button{
+      cursor: pointer;
+      .search-icon{
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+</style>
