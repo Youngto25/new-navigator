@@ -85,10 +85,18 @@ export default {
   },
   beforeMount(){
     // localStorage.setItem('navInfo',X)
-    // console.log(localStorage.getItem('navInfo'))
+    // console.log(localStorage.getItem('navInfo'))   
+    if(localStorage.getItem('all-source')){
+      console.log(1)
+      this.list = JSON.parse(localStorage.getItem('all-source'))
+      console.log(this.list)
+    }else{
+      console.log(2)
+      localStorage.setItem('all-source',JSON.stringify(X))
+    }
   },
   mounted(){
-    this.list = X
+    //this.list = X
   },
   methods: {
     x(e){
@@ -117,7 +125,7 @@ export default {
   .wrapper{
     ul{
       margin: 0 auto;
-      width: 512px;
+      width: 640px;
       display: flex;
       flex-wrap: wrap;
       li{

@@ -16,6 +16,7 @@
       {"href":"https://formstone.it/","value":"formstone"},
       {"href":"https://semantic-ui.com/","value":"semantic"},
       {"href":"https://www.swiper.com.cn/","value":"Swiper"},
+	  {"href":"https://appelsiini.net/projects/lazyload/","value":"Lazyload"},
       {"href":"https://webpack.docschina.org/concepts/","value":"Webpack"},
       {"href":"https://zh.parceljs.org/getting_started.html/","value":"Parcel"},
       {"href":"https://vuepress.vuejs.org/zh/","value":"vuepress"} 
@@ -54,8 +55,9 @@
   "blog": [
     {"href":"https://www.w3cplus.com/","value":"w3cplus"},
     {"href":"https://www.yuque.com/fe9","value":"前端九部"},
+	{"href":"https://www.jianshu.com/u/1c5fe5a330e2","value":"简书"},
     {"href":"https://www.cnblogs.com/","value":"博客园"},
-    {"href":"http://cndevdocs.com/","value":"前端开发中文文档导航"},
+    {"href":"http://cndevdocs.com/","value":"文档导航"},
     {"href":"https://juejin.im/timeline","value":"掘金"},
     {"href":"https://segmentfault.com/","value":"思否"},
     {"href":"https://www.csdn.net/","value":"CSDN"},
@@ -64,13 +66,21 @@
     {"href":"http://www.ruanyifeng.com/blog/developer/","value":"阮一峰"},
     {"href":"https://down.51cto.com/","value":"51cto"},
     {"href":"https://www.nowcoder.com/","value":"牛客"},
-    {"href":"https://leetcode-cn.com/explore/","value":"Leetcode"}
+    {"href":"https://leetcode-cn.com/explore/","value":"Leetcode"},
+	{"href":"https://regexr.com/","value":"正则"}
   ],
   "vedio": [
     {"href":"https://ke.qq.com/","value":"腾讯课堂"},
     {"href":"https://study.163.com/","value":"网易云课堂"},
     {"href":"https://www.imooc.com/","value":"慕课网"},
-    {"href":"https://www.51zxw.net/","value":"我要自学网"}  
-
+    {"href":"https://www.51zxw.net/","value":"我要自学网"},  
+	{"href":"https://www.juhe.cn/","value":"聚合"},
+	{"href":"https://cn.aliyun.com/","value":"阿里云"},
+	{"href":"https://echarts.baidu.com/echarts2/index.html","value":"Echarts Example"},
+	{"href":"https://wx.jdcloud.com/","value":"万象"},
+	{"href":"https://leancloud.cn/dashboard/login.html#/signin","value":"Leancloud"},
+	{"href":"https://code.aliyun.com/","value":"Aliyun Code"},
+	{"href":"https://github.com/Youngto25","value":"Github"},
+	{"href":"https://stackoverflow.com/","value":"Stackoverflow"}
   ]
 }

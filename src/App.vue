@@ -91,6 +91,12 @@ export default {
     confirm(){
       this.close()
       console.log(this.name,this.ip)
+      let source = JSON.parse(localStorage.getItem('all-source'))
+      console.log(source[this.keyword])
+      let arr = [{"href": this.ip,"value": this.name}]
+      source[this.keyword].unshift(...arr)
+      console.log(source.get_document)
+      console.log(source)
     },
     cancel(){
       this.close()
