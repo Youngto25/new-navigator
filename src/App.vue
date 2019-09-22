@@ -8,46 +8,41 @@
     >
       <div class="logo" />
       <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
-        <a-menu-item key="1">
+        <a-menu-item key="1" @click="getKey">
           <a-icon type="user" />
-          <span>nav 1</span>
+          <span>网页导航</span>
         </a-menu-item>
-        <a-menu-item key="2">
-          <a-icon type="video-camera" />
-          <span>nav 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
+        <a-menu-item key="2" @click="getKey">
           <a-icon type="upload" />
-          <span>nav 3</span>
+          <span>收藏文章</span>
+        </a-menu-item>
+        <a-menu-item key="3" @click="getKey">
+          <a-icon type="video-camera" />
+          <span>工作日志</span>
+        </a-menu-item>
+        <a-menu-item key="4" @click="getKey">
+          <a-icon type="upload" />
+          <span>留言板</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout class="content-wrapper">
+      
       <a-layout-header style="background: #fff; padding: 0">
         <a-icon
           class="trigger"
           :type="collapsed ? 'menu-unfold' : 'menu-fold'"
           @click="()=> collapsed = !collapsed"
         />
-        how are you???
+        <span style="fontSize: 16px">how are you???</span>
       </a-layout-header>
       <a-layout-content :style="{ background: '#fff', minHeight: '280px' }">
         <div class="content">
-          <Search class="search"/>
-          <Source @visible="change" />
+          <component :is="whichOne"></component>
+          <!-- <Search class="search"/>
+          <Source @visible="change" /> -->
         </div>
       </a-layout-content>
-      <div class="mask" :style="{display: `${visible ? 'block' : 'none'}`}">
-        <div class="edit">
-          <div class="title"><span>请编辑需要加入的网站</span></div>
-          <div class="format">名称：<input type="text" v-model="name"></div>
-          <div class="format">网址：<input type="text" v-model="ip"></div>
-          <div class="buttons">
-            <a-button @click="confirm">确认</a-button>
-            <a-button @click="cancel">取消</a-button>
-          </div>
-        </div>
-      </div>
     </a-layout>
   </a-layout>
   
@@ -55,22 +50,24 @@
 </template>
 
 <script>
-import Search from './components/Search'
-import Source from './components/Source'
+import HelloWorld from './components/HelloWorld'
+import Collect from './components/Collect'
+import Worklog from './components/Worklog'
+import Message from './components/Message'
 export default {
   name: 'app',
   data(){
     return {
       collapsed: false,
-      visible: false,
-      keyword: null,
-      name: '',
-      ip: ''
+      key: 1,
+      whichOne: 'HelloWorld'
     }
   },
   components: {
-    Search,
-    Source
+    HelloWorld,
+    Collect,
+    Worklog,
+    Message
   },
   beforeMount(){
     // this.$http('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
@@ -81,25 +78,23 @@ export default {
   mounted(){
   },
   methods: {
-    change(e){
-      this.keyword = e
-      this.visible = true
+    getKey(e){
+      this.key = e.key
+      this.setComponent()
     },
-    close(){
-      this.visible = false
-    },
-    confirm(){
-      this.close()
-      console.log(this.name,this.ip)
-      let source = JSON.parse(localStorage.getItem('all-source'))
-      console.log(source[this.keyword])
-      let arr = [{"href": this.ip,"value": this.name}]
-      source[this.keyword].unshift(...arr)
-      console.log(source.get_document)
-      console.log(source)
-    },
-    cancel(){
-      this.close()
+    setComponent(){
+      console.log('触发')
+      let key = parseInt(this.key)
+      if(key === 1){
+        this.whichOne = 'HelloWorld'
+      }else if(key === 2){
+        this.whichOne = 'Collect'
+      }else if(key === 3){
+        this.whichOne = 'Worklog'
+      }else if(key === 4){
+        this.whichOne = 'Message'
+      }
+      console.log(this.whichOne)
     }
   }
 }
@@ -125,6 +120,8 @@ export default {
 
 .content{
   height: calc(100vh - 64px);
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
   border-top: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
@@ -133,53 +130,4 @@ export default {
     margin-top: 50px;
   }
 }
-
-.content-wrapper{
-  position: relative;
-}
-
-.mask{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background: rgba(0,0,0,0.5);
-    .edit{
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      height: 200px;
-      width: 400px;
-      background: #ffffff;
-      border-radius: 16px;
-      .title{
-        margin: 16px;
-        font-size: 16px;
-        font-weight: 500;
-      }
-      .format{
-        margin: 20px 0 10px 16px;
-        input{
-          border: 1px solid #cccccc;
-          border-radius: 4px;
-          width: 320px;
-          height: 32px;
-          padding-left: 8px;
-        }
-      }
-      .buttons{
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 22px;
-        button{
-          margin-left: 8px;
-          &:first-child{
-            background: #1890FF;
-            color: #ffffff;
-          }
-        }
-      }
-    }
-  }
 </style>

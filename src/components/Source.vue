@@ -87,11 +87,8 @@ export default {
     // localStorage.setItem('navInfo',X)
     // console.log(localStorage.getItem('navInfo'))   
     if(localStorage.getItem('all-source')){
-      console.log(1)
       this.list = JSON.parse(localStorage.getItem('all-source'))
-      console.log(this.list)
     }else{
-      console.log(2)
       localStorage.setItem('all-source',JSON.stringify(X))
     }
   },
@@ -131,7 +128,8 @@ export default {
       li{
         width: 120px;
         height: 36px;
-        background: #f5f6f1;
+        background: rgba(245, 246, 241,0.7);
+        font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -140,7 +138,7 @@ export default {
         cursor: pointer;
         transition: all 0.5s;
         &:hover{
-          background: #dcdde1;
+          background: #ffffff;
         }
       }
     }
@@ -150,6 +148,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  /deep/.ant-tabs-tab{
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 14px;
   }
 }
 </style>

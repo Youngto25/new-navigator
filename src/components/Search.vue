@@ -1,8 +1,8 @@
 <template>
   <div id="wrapper">
     <div class="change">
-      <span @click="isTrue = !isTrue" :class="{'active': !isTrue}">Bing</span>
-      <span @click="isTrue = !isTrue" :class="{'active': isTrue}">Google</span>
+      <span @click="doBing" :class="{'active': isBing}">Bing</span>
+      <span @click="doGoogle" :class="{'active': isGoogle}">Google</span>
     </div>
     <div class="search-wrapper">
       <input type="text" v-model="value" @keypress.enter="search"/>
@@ -17,16 +17,28 @@ export default {
   data(){
     return {
       value: '',
-      isTrue: false
+      isBing: false,
+      isGoogle: false
     }
+  },
+  mounted(){
+    this.doBing()
   },
   methods: {
     search(){
-      if(this.isTrue){
+      if(this.isGoogle){
         window.open(`https://www.google.com/search?q=${this.value}`)
       }else{
         window.open(`https://cn.bing.com/search?q=${this.value}`)
       }
+    },
+    doBing(){
+      this.isBing = true
+      this.isGoogle = false
+    },
+    doGoogle(){
+      this.isBing = false
+      this.isGoogle = true
     }
   }
 };
@@ -38,11 +50,13 @@ export default {
   .change{
     align-self: flex-start;
     text-align: center;
+    margin-bottom: -1px;
     span{
       display: inline-block;
       width: 80px;
-      height: 35px;
-      line-height: 35px;
+      height: 42px;
+      font-size: 18px;
+      line-height: 42px;
       background: #cccccc;
       position: relative;
       color: #1F1F1F;
@@ -55,7 +69,7 @@ export default {
       &::after{
         content: '';
         display: block;
-        border-width: 17.5px;
+        border-width: 21px;
         border-style: solid;
         border-color: transparent transparent #cccccc #cccccc;
         position: absolute;
@@ -68,6 +82,7 @@ export default {
         background: #efefef;
         z-index: 10;
         opacity: 1;
+        color: #4285F4;
         &::after{
           border-color: transparent transparent #efefef #efefef;
         }
@@ -75,18 +90,19 @@ export default {
     }
   }
   .search-wrapper{
-    border: 1px solid #cccccc;
+    //border: 1px solid #cccccc;
     display: flex;
     align-items: center;
     padding: 4px 8px;
     background: #efefef;
     border-radius: 0 8px 8px 8px;
+    width: 640px;
     &.active{
-      border: 0 1px 1px 1px solid #232323;
+      //border: 1px solid #232323;
     }
     input{
-      height: 30px;
-      width: 500px;
+      height: 42px;
+      width: 600px;
       padding: 8px;
       font-size: 14px;
       background: #efefef;
