@@ -1,6 +1,6 @@
 {
   "user": "Blake",
-  "document": [    
+  "document": [
       {"href":"http://es6.ruanyifeng.com/","value":"ES6教程"},
       {"href":"https://wangdoc.com/javascript/","value":"JavaScript教程"},
       {"href":"https://cloud.tencent.com/developer/devdocs","value":"腾讯云社区"},
@@ -23,7 +23,11 @@
       {"href":"https://zh.parceljs.org/getting_started.html/","value":"Parcel"},
       {"href":"https://vuepress.vuejs.org/zh/","value":"vuepress"},
       {"href":"https://hellosean1025.github.io/yapi/","value":"YApi"},
-      {"href":"https://www.echartsjs.com/en/index.html","value":"Echarts"}
+      {"href":"https://www.echartsjs.com/en/index.html","value":"Echarts"},
+      {"href":"https://adonisjs.com/docs/4.1/installation","value":"adonis"},
+      {"href":"https://dvajs.com/api/","value": "dvajs"},
+      {"href": "http://momentjs.cn/docs/#/displaying/format/","value": "momentjs"},
+      {"href": "https://www.lodashjs.com/docs/latest","value": "lodashjs"}
   ],
   "entertainment": [
       {"href":"https://weibo.com/u/5378341288/home?wvr=5&sudaref=weibo.com&display=0&retcode=6102&sudaref=passport.weibo.com","value":"微博"},
@@ -77,14 +81,16 @@
       {"href":"https://ke.qq.com/","value":"腾讯课堂"},
       {"href":"https://study.163.com/","value":"网易云课堂"},
       {"href":"https://www.imooc.com/","value":"慕课网"},
-      {"href":"https://www.51zxw.net/","value":"我要自学网"},  
+      {"href":"https://www.51zxw.net/","value":"我要自学网"},
 	    {"href":"https://www.juhe.cn/","value":"聚合"},
 	    {"href":"https://cn.aliyun.com/","value":"阿里云"},
+      {"href": "https://dev.tencent.com/u/idoitle","value": "腾讯开发者平台"},
 	    {"href":"https://echarts.baidu.com/echarts2/index.html","value":"Echarts Example"},
 	    {"href":"https://wx.jdcloud.com/","value":"万象"},
 	    {"href":"https://leancloud.cn/dashboard/login.html#/signin","value":"Leancloud"},
 	    {"href":"https://code.aliyun.com/","value":"Aliyun Code"},
 	    {"href":"https://github.com/Youngto25","value":"Github"},
-	    {"href":"https://stackoverflow.com/","value":"Stackoverflow"}
+	    {"href":"https://stackoverflow.com/","value":"Stackoverflow"},
+      {"href": "http://vip.jspang.com:5000/","value": "技术胖"}
   ]
 }
