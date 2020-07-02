@@ -67,17 +67,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.search{
-  margin-top: 80px;
-}
-
 .hello{
   position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+    margin-top: -300px;
   .mask{
     position: absolute;
     left: 0;
@@ -88,7 +83,7 @@ export default {
     background: rgba(0,0,0,0.5);
     .edit{
       position: absolute;
-      top: 30%;
+      top: 0;
       left: 50%;
       transform: translate(-50%,-50%);
       height: 200px;
