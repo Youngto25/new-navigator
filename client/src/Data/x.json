@@ -91,7 +91,7 @@
     },
     {
       "href": "https://adonisjs.com/docs/4.1/installation",
-      "value": "adonis"
+      "value": "Adonis"
     },
     {
       "href": "https://dvajs.com/api/",
@@ -104,6 +104,10 @@
     {
       "href": "https://www.lodashjs.com/docs/latest",
       "value": "lodashjs"
+    },
+    {
+      "href": "https://learngitbranching.js.org/?locale=zh_CN",
+      "value": "LearnGit"
     }
   ],
   "entertainment": [
@@ -182,8 +186,16 @@
   ],
   "design": [
     {
+      "href": "https://www.tiobe.com/tiobe-index/",
+      "value": "TIOBE"
+    },
+    {
       "href": "https://codepen.io/",
       "value": "Codepen"
+    },
+    {
+      "href": "https://codesandbox.io/",
+      "value": "CodeSandBox"
     },
     {
       "href": "https://flatuicolors.com/",
@@ -238,6 +250,10 @@
     {
       "href": "https://www.yuque.com/fe9",
       "value": "前端九部"
+    },
+    {
+      "href": "https://time.geekbang.org/",
+      "value": "极客时间"
     },
     {
       "href": "https://www.jianshu.com/u/1c5fe5a330e2",
