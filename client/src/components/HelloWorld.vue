@@ -68,11 +68,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .hello{
+  padding-top: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-    margin-top: -300px;
   .mask{
     position: absolute;
     left: 0;

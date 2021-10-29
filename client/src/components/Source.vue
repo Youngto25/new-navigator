@@ -1,9 +1,9 @@
 <template>
-  <div class="xxx">
-    <a-tabs defaultActiveKey="1">
-      <a-tab-pane key="1">
+  <div class="sourceWrapper">
+    <a-tabs :key="activeKey">
+      <a-tab-pane v-for="vo in itemList" :key="vo.source">
         <span slot="tab">
-          <a-icon type="android" />技术文档
+          <a-icon type="android" />{{vo.label}}
         </span>
         <div class="wrapper">
           <ul>
@@ -11,79 +11,7 @@
               <a-icon type="plus-circle" />
             </li>
             <a
-              v-for="(item,index) in list.document"
-              :key="index"
-              :href="item.href"
-              target="_blank"
-            >{{ item.value }}</a>
-          </ul>
-        </div>
-      </a-tab-pane>
-      <a-tab-pane key="3">
-        <span slot="tab">
-          <a-icon type="android" />技术博客
-        </span>
-        <div class="wrapper">
-          <ul>
-            <li @click="changeVisible">
-              <a-icon type="plus-circle" />
-            </li>
-            <a
-              v-for="(item,index) in list.blog"
-              :key="index"
-              :href="item.href"
-              target="_blank"
-            >{{ item.value }}</a>
-          </ul>
-        </div>
-      </a-tab-pane>
-      <a-tab-pane key="4">
-        <span slot="tab">
-          <a-icon type="android" />设计
-        </span>
-        <div class="wrapper">
-          <ul>
-            <li @click="changeVisible">
-              <a-icon type="plus-circle" />
-            </li>
-            <a
-              v-for="(item,index) in list.design"
-              :key="index"
-              :href="item.href"
-              target="_blank"
-            >{{ item.value }}</a>
-          </ul>
-        </div>
-      </a-tab-pane>
-      <a-tab-pane key="5">
-        <span slot="tab">
-          <a-icon type="android" />视频学习
-        </span>
-        <div class="wrapper">
-          <ul>
-            <li @click="changeVisible">
-              <a-icon type="plus-circle" />
-            </li>
-            <a
-              v-for="(item,index) in list.vedio"
-              :key="index"
-              :href="item.href"
-              target="_blank"
-            >{{ item.value }}</a>
-          </ul>
-        </div>
-      </a-tab-pane>
-      <a-tab-pane key="2">
-        <span slot="tab">
-          <a-icon type="android" />娱乐
-        </span>
-        <div class="wrapper">
-          <ul>
-            <li @click="changeVisible">
-              <a-icon type="plus-circle" />
-            </li>
-            <a
-              v-for="(item,index) in list.entertainment"
+              v-for="(item,index) in list[vo.source]"
               :key="index"
               :href="item.href"
               target="_blank"
@@ -95,30 +23,37 @@
   </div>
 </template>
 <script>
-import X from '../Data/x.json'
+import X from '../Data/source'
 export default {
   data() {
     return {
-      list: null
+      activeKey: 'document',
+      list: X,
+      itemList: [
+        {
+          label: '技术文档',
+          source: 'document'
+        },
+        {
+          label: '技术博客',
+          source: 'blog'
+        },
+        {
+          label: '设计',
+          source: 'design'
+        },
+        {
+          label: '视频学习',
+          source: 'vedio'
+        },
+        {
+          label: '娱乐',
+          source: 'entertainment'
+        },
+      ],
     }
-  },
-  beforeMount() {
-    // localStorage.setItem('navInfo',X)
-    // console.log(localStorage.getItem('navInfo'))
-    if (localStorage.getItem('all-source')) {
-      this.list = JSON.parse(localStorage.getItem('all-source'))
-    } else {
-      localStorage.setItem('all-source', JSON.stringify(X))
-    }
-  },
-  mounted() {
-    //this.list = X
   },
   methods: {
-    x(e) {
-      let src = e.target.getAttribute('data-src')
-      window.open(src)
-    },
     changeVisible(e) {
       let keyword = e.target.getAttribute('data-remind')
       this.$emit('visible', keyword)
@@ -130,7 +65,7 @@ export default {
 a {
   text-decoration: none;
 }
-.xxx {
+.sourceWrapper {
   position: relative;
   width: 662px;
   height: 400px;

@@ -6,5 +6,8 @@ module.exports = {
         javascriptEnabled: true
       }
     }
+  },
+  chainWebpack: config => {
+    config.output.filename('[name].[hash].js').end()
   }
 }

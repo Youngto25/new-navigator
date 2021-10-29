@@ -79,12 +79,5 @@ export default {
   background-image: url(./assets/background.jpg);
   background-size: cover;
   border-top: 1px solid #cccccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .search{
-    margin-top: 50px;
-  }
 }
 </style>
