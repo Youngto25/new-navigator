@@ -76,7 +76,7 @@ export default {
 
 .content{
   height: 100vh;
-  background-image: url(./assets/background.jpg);
+  background-image: url('https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
   background-size: cover;
   border-top: 1px solid #cccccc;
 }
