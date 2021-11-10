@@ -38,7 +38,7 @@ export default {
       "value": "iView"
     },
     {
-      "href": "https://cn.vuejs.org/v2/guide/",
+      "href": "https://cn.vuejs.org/",
       "value": "Vue"
     },
     {
@@ -51,15 +51,15 @@ export default {
     },
     {
       "href": "https://www.chaijs.com/",
-      "value": "chaijs"
+      "value": "Chai"
     },
     {
       "href": "https://formstone.it/",
-      "value": "formstone"
+      "value": "Formstone"
     },
     {
       "href": "https://semantic-ui.com/",
-      "value": "semantic"
+      "value": "Semantic"
     },
     {
       "href": "https://www.swiper.com.cn/",
@@ -67,7 +67,7 @@ export default {
     },
     {
       "href": "https://appelsiini.net/projects/lazyload/",
-      "value": "Lazyload"
+      "value": "Lazy Load"
     },
     {
       "href": "https://webpack.docschina.org/concepts/",
@@ -79,31 +79,27 @@ export default {
     },
     {
       "href": "https://vuepress.vuejs.org/zh/",
-      "value": "vuepress"
+      "value": "VuePress"
     },
     {
       "href": "https://hellosean1025.github.io/yapi/",
       "value": "YApi"
     },
     {
-      "href": "https://www.echartsjs.com/en/index.html",
-      "value": "Echarts"
-    },
-    {
-      "href": "https://adonisjs.com/docs/4.1/installation",
+      "href": "https://adonisjs.com/",
       "value": "Adonis"
     },
     {
       "href": "https://dvajs.com/api/",
-      "value": "dvajs"
+      "value": "DvaJs"
     },
     {
       "href": "http://momentjs.cn/docs/#/displaying/format/",
-      "value": "momentjs"
+      "value": "MomentJs"
     },
     {
       "href": "https://www.lodashjs.com/docs/latest",
-      "value": "lodashjs"
+      "value": "Lodash"
     },
     {
       "href": "https://learngitbranching.js.org/?locale=zh_CN",
@@ -112,7 +108,7 @@ export default {
   ],
   "entertainment": [
     {
-      "href": "https://weibo.com/u/5378341288/home?wvr=5&sudaref=weibo.com&display=0&retcode=6102&sudaref=passport.weibo.com",
+      "href": "https://weibo.com/",
       "value": "微博"
     },
     {
@@ -227,19 +223,19 @@ export default {
     },
     {
       "href": "https://www.pinterest.com/",
-      "value": "pinterest"
+      "value": "Pinterest"
     },
     {
       "href": "https://freebiesbug.com/",
-      "value": "freebiesbug"
+      "value": "Freebiesbug"
     },
     {
       "href": "https://www.iconfont.cn/",
-      "value": "iconfont"
+      "value": "Iconfont"
     },
     {
       "href": "https://wallhaven.cc/",
-      "value": "wallhaven"
+      "value": "Wallhaven"
     }
   ],
   "blog": [
@@ -256,7 +252,7 @@ export default {
       "value": "极客时间"
     },
     {
-      "href": "https://www.jianshu.com/u/1c5fe5a330e2",
+      "href": "https://www.jianshu.com/",
       "value": "简书"
     },
     {
@@ -268,7 +264,7 @@ export default {
       "value": "文档导航"
     },
     {
-      "href": "https://juejin.im/timeline",
+      "href": "https://juejin.cn/",
       "value": "掘金"
     },
     {
@@ -288,11 +284,11 @@ export default {
       "value": "张鑫旭"
     },
     {
-      "href": "http://www.ruanyifeng.com/blog/developer/",
+      "href": "http://www.ruanyifeng.com/",
       "value": "阮一峰"
     },
     {
-      "href": "https://down.51cto.com/",
+      "href": "https://edu.51cto.com/",
       "value": "51cto"
     },
     {
@@ -328,8 +324,8 @@ export default {
       "value": "微信公众平台"
     },
     {
-      "href": "https://echarts.baidu.com/echarts2/index.html",
-      "value": "Echarts Example"
+      "href": "https://echarts.apache.org/zh/index.html",
+      "value": "ECharts"
     },
     {
       "href": "https://wx.jdcloud.com/",
@@ -341,7 +337,7 @@ export default {
     },
     {
       "href": "https://code.aliyun.com/",
-      "value": "aliCode"
+      "value": "AliCode"
     },
     {
       "href": "https://github.com/Youngto25",

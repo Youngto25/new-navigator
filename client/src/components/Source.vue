@@ -3,7 +3,7 @@
     <a-tabs :key="activeKey">
       <a-tab-pane v-for="vo in itemList" :key="vo.source">
         <span slot="tab">
-          <a-icon type="android" />{{vo.label}}
+          <a-icon :type="vo.icon" />{{vo.label}}
         </span>
         <div class="wrapper">
           <ul>
@@ -15,7 +15,10 @@
               :key="index"
               :href="item.href"
               target="_blank"
-            >{{ item.value }}</a>
+            >
+            <Favicon :href="item.href"/>
+            <div class="value-text">{{ item.value }}</div>
+            </a>
           </ul>
         </div>
       </a-tab-pane>
@@ -23,8 +26,12 @@
   </div>
 </template>
 <script>
+import Favicon from './Favicon.vue';
 import X from '../Data/source'
 export default {
+  components: {
+    Favicon
+  },
   data() {
     return {
       activeKey: 'document',
@@ -32,23 +39,28 @@ export default {
       itemList: [
         {
           label: '技术文档',
-          source: 'document'
+          source: 'document',
+          icon: 'experiment',
         },
         {
           label: '技术博客',
-          source: 'blog'
+          source: 'blog',
+          icon: 'switcher',
         },
         {
           label: '设计',
-          source: 'design'
+          source: 'design',
+          icon: 'rocket',
         },
         {
           label: '视频学习',
-          source: 'vedio'
+          source: 'vedio',
+          icon: 'video-camera',
         },
         {
           label: '娱乐',
-          source: 'entertainment'
+          source: 'entertainment',
+          icon: 'thunderbolt',
         },
       ],
     }
@@ -94,6 +106,13 @@ a {
         cursor: pointer;
         transition: all 0.5s;
         color: rgba(0, 0, 0, 0.65);
+        .value-text {
+          line-height: 30px;
+          max-width: 80px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
         &:hover {
           background: #ffffff;
         }
