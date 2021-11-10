@@ -79,17 +79,15 @@ a {
 }
 .sourceWrapper {
   position: relative;
-  width: 662px;
-  height: 400px;
-  overflow-y: auto;
+  width: 640px;
   margin: 0 auto;
-  border: 1px solid #cccccc;
   border-radius: 4px;
   margin-top: 30px;
   .wrapper {
+    // background: turquoise;
     ul {
-      margin: 0 auto;
-      width: 640px;
+      width: 100%;
+      overflow-y: auto;
       display: flex;
       flex-wrap: wrap;
       li,
