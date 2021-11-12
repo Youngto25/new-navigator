@@ -1,5 +1,12 @@
 <template>
   <div class="hello">
+    <div class="add-item-container">
+      <div class="add-item">
+        <div class="add">
+          <a-icon type="plus"></a-icon>
+        </div>
+      </div>
+    </div>
       <Search class="search"/>
       <Source @visible="change" />
       <div class="mask" :style="{display: `${visible ? 'block' : 'none'}`}">
@@ -43,20 +50,15 @@ export default {
     },
     confirm(){
       this.close()
-      console.log(this.name,this.ip)
-      let source = JSON.parse(localStorage.getItem('all-source'))
-      console.log(source[this.keyword])
-      let arr = [{"href": this.ip,"value": this.name}]
-      source[this.keyword].unshift(...arr)
-      console.log(source.get_document)
-      console.log(source)
+      let source = JSON.parse(localStorage.getItem('all-source'));
+      let arr = [{"href": this.ip,"value": this.name}];
+      source[this.keyword].unshift(...arr);
     },
     cancel(){
       this.close()
     },
     getKey(e){
       this.key = e.key
-      console.log(this.key)
     }
   },
   props: {
@@ -73,6 +75,43 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .add-item-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    .add-item {
+      width: 100%;
+      height: 100%;
+      transform: translateX(70%);
+      transition: all 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        transform: translateX(0);
+      }
+      .add {
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #333;
+        animation: add-transition infinite 1.5s;
+        &:hover {
+          animation: none
+        }
+      }
+    }
+  }
   .mask{
     position: absolute;
     left: 0;
@@ -118,6 +157,18 @@ export default {
         }
       }
     }
+  }
+}
+
+@keyframes add-transition {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>
