@@ -2,6 +2,10 @@ export default {
   "user": "Blake",
   "document": [
     {
+      "href": "https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html",
+      "value": "微信开放文档"
+    },
+    {
       "href": "http://es6.ruanyifeng.com/",
       "value": "ES6教程"
     },
@@ -82,12 +86,8 @@ export default {
       "value": "VuePress"
     },
     {
-      "href": "https://hellosean1025.github.io/yapi/",
-      "value": "YApi"
-    },
-    {
       "href": "https://adonisjs.com/",
-      "value": "Adonis"
+      "value": "AdonisJS"
     },
     {
       "href": "https://dvajs.com/api/",
@@ -95,7 +95,11 @@ export default {
     },
     {
       "href": "http://momentjs.cn/docs/#/displaying/format/",
-      "value": "MomentJs"
+      "value": "Moment.js"
+    },
+    {
+      "href": "https://dayjs.gitee.io/docs/zh-CN/installation/installation",
+      "value": "Day.js"
     },
     {
       "href": "https://www.lodashjs.com/docs/latest",
@@ -104,7 +108,11 @@ export default {
     {
       "href": "https://learngitbranching.js.org/?locale=zh_CN",
       "value": "LearnGit"
-    }
+    },
+    {
+      "href": "https://fastapi.tiangolo.com/zh/",
+      "value": "FastAPI"
+    },
   ],
   "entertainment": [
     {
@@ -138,6 +146,10 @@ export default {
     {
       "href": "https://www.bilibili.com/",
       "value": "Bilibili"
+    },
+    {
+      "href": "https://www.twitch.tv/",
+      "value": "Twitch"
     },
     {
       "href": "https://www.youtube.com/",
@@ -276,10 +288,6 @@ export default {
       "value": "CSDN"
     },
     {
-      "href": "https://time.geekbang.org/",
-      "value": "极客"
-    },
-    {
       "href": "https://www.zhangxinxu.com/wordpress/page/64/",
       "value": "张鑫旭"
     },
@@ -347,12 +355,8 @@ export default {
       "href": "https://stackoverflow.com/",
       "value": "Stackoverflow"
     },
-    {
-      "href": "http://vip.jspang.com:5000/",
-      "value": "技术胖"
-    }
   ],
-  "vedio": [
+  "video": [
     {
       "href": "https://ke.qq.com/",
       "value": "腾讯课堂"
@@ -368,6 +372,14 @@ export default {
     {
       "href": "https://www.51zxw.net/",
       "value": "我要自学网"
+    },
+    {
+      "href": "https://xiedaimala.com/",
+      "value": "饥人谷"
+    },
+    {
+      "href": "https://jspang.com/",
+      "value": "技术胖"
     }
   ]
 }

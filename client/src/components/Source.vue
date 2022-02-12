@@ -54,7 +54,7 @@ export default {
         },
         {
           label: '视频学习',
-          source: 'vedio',
+          source: 'video',
           icon: 'video-camera',
         },
         {
