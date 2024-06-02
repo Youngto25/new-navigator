@@ -16,7 +16,7 @@ jobs:
       - name: steup node
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '10.x'
         
       - name: install dependencies
         run: npm install
